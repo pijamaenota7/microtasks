@@ -8,12 +8,15 @@ interface Component3Props {
 
 const Component3: React.FC<Component3Props> = ({ onCallback }) => {
     const [isGreen, setIsGreen] = useState(false);
-
+    const onClickHandler = () => {
+        setIsGreen(!isGreen)
+        onCallback()
+    }
 
     return (
         <div className="container">
             <div className={`circle ${isGreen ? 'green' : 'red'}`}></div>
-            <Component4 onCallback={()=>{}}  />
+            <Component4 onCallback={onClickHandler}  />
         </div>
     );
 };

@@ -8,7 +8,11 @@ interface Component5Props {
 const Component5: React.FC<Component5Props> = ({ onCallback }) => {
     const [isGreen, setIsGreen] = useState(false);
 
-    const onClickHandler = () => setIsGreen(!isGreen)
+    const onClickHandler = () => {
+        setIsGreen(!isGreen)
+        onCallback()
+    }
+
     return (
         <div className="container">
             <div className={`circle ${isGreen ? 'green' : 'red'}`}></div>

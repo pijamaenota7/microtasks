@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Component1 from "./components/Component1";
 
@@ -15,7 +15,7 @@ function App() {
         <div className="App">
             <h1>Callback Hell</h1>
             <div className="container">
-                <Component1 />
+                <Component1 onCallback={handleFinalCallback} />
             </div>
             {allGreen && <p>Первый круг Ада пройден!</p>}
         </div>
